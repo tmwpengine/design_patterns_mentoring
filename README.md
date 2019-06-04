@@ -1,2 +1,2 @@
-# factory_pattern
-Demonstrates simple factory patterns
+# Design patterns
+For mentoring purposes, simple implementations of design patterns in Python
