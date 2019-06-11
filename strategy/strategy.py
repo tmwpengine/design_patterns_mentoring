@@ -5,6 +5,7 @@ class Vessel:
     def __init__(self, func=None):
         if func:
             self.status = "In vessel"
+            # this binds the injected function to the class instance, in other words it can be used with self.
             self.start_vessel = types.MethodType(func, self)
             self.class_name = f'{self.__class__.__name__} and function {func.__name__}'
         else:
