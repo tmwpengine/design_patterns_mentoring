@@ -21,7 +21,7 @@ class Aeroplane(Vessel):
 
 
 class Boat(Vessel):
-    def start_boat(self):
+    def start_vessel(self):
         print("Boat vessel")
         print("Goes slowly down the river")
         print(f'Initiated from class {self.__class__.__name__}\n')
