@@ -4,6 +4,7 @@ import types
 class Vessel:
     def __init__(self, func=None):
         if func:
+            self.status = "In vessel"
             self.start_vessel = types.MethodType(func, self)
             self.class_name = f'{self.__class__.__name__} and function {func.__name__}'
         else:
@@ -20,18 +21,21 @@ class Vessel:
 def start_car(self):
     print("Car vessel")
     print("Slowly takes off on to the road")
+    print(self.status)
     print(f'Initiated from class {self.class_name}\n')
 
 
 def start_aeroplane(self):
     print("Aeroplane vessel")
     print("Takes off down a runway and up into the air")
+    print(self.status)
     print(f'Initiated from class {self.class_name}\n')
 
 
 def start_boat(self):
     print("Boat vessel")
     print("Goes slowly down the river")
+    print(self.status)
     print(f'Initiated from class {self.class_name}\n')
 
 
@@ -46,8 +50,3 @@ aeroplane.start_vessel()
 
 boat = Vessel(start_boat)
 boat.start_vessel()
-
-
-
-
-
