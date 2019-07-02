@@ -1,4 +1,4 @@
-# Observable
+# Observable/Publish/Subject
 class Speaker:
     def __init__(self):
         self.listeners = []
@@ -14,7 +14,7 @@ class Speaker:
             print(f'Failed to add: {listener}')
 
     def notify(self):
-        [o.notify(self) for o in self.listeners]
+        [listener.notify(self) for listener in self.listeners]
 
     def announce(self, announcement):
         self.announcement = announcement
